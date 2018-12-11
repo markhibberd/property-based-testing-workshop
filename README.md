@@ -69,5 +69,6 @@ cabal new-build --enable-tests
 
 # Or, set-up using stack.
 
-stack build
+stack init
+stack build --test
 ```
