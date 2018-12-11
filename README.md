@@ -55,20 +55,11 @@ git clone https://github.com/markhibberd/property-based-testing-workshop.git
 
 ### Initial Build
 
-There are two commonly used command line tools for building haskell
-projects: `cabal` and `stack`. If you don't know or care about the
-difference for now, just use the `cabal` option below, if you have
-already used one of them and want to keep to what is familiar then
-follow the relevant instructions.
+We will be using `ghci` directly for the workshop, so please set-up
+using `cabal`.
 
 ```
 # Set-up using cabal install
 
 cabal new-build --enable-tests
-
-
-# Or, set-up using stack.
-
-stack init
-stack build --test
 ```
