@@ -63,3 +63,29 @@ using `cabal`.
 
 cabal new-build --enable-tests
 ```
+
+## Running Tests
+
+Load ghci:
+
+    cabal new-repl test
+
+To run one test:
+
+    Hedgehog.check Test.Basics.prop_introduction
+
+To run all the tests in a module.
+
+    Test.Basics.tests
+
+To run all the tests.
+
+    Main.main
+
+To sample the output of a generator:
+
+    Hedgehog.Gen.sample Test.SimpleGen.int
+
+If these don't work for you, now is the time to ask for help, being
+able easily to run the tests is import as you work through the
+problems.
