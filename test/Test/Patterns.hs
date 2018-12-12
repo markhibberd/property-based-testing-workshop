@@ -53,8 +53,7 @@ import qualified Test.SimpleGen as SimpleGen
 prop_round_trip_lines_unlines :: Property
 prop_round_trip_lines_unlines =
   property $ do
-    strings <- forAll $ SimpleGen.list (Gen.filter (not . elem '\n') $ Gen.string (Range.linear 0 100) Gen.unicode)
-    lines (unlines strings) === strings
+    success -- WORKSHOP EXERCISE
 
 
 -- == Exercise 7 == --
@@ -90,8 +89,8 @@ prop_round_trip_lines_unlines =
 prop_idempotent :: Property
 prop_idempotent =
   property $ do
-    unsorted <- forAll $ SimpleGen.list SimpleGen.int
-    sort unsorted === sort (sort unsorted)
+    success -- WORKSHOP EXERCISE
+
 
 -- == Exercise 8 == --
 
@@ -121,12 +120,7 @@ prop_idempotent =
 prop_verification :: Property
 prop_verification =
   property $ do
-    unsorted <- forAll $ SimpleGen.list SimpleGen.int
-    assert $ slidingAll (\previous el -> case previous of
-      Nothing ->
-        True
-      Just p ->
-        p <= el) (sort unsorted)
+    success -- WORKSHOP EXERCISE
 
 
 -- == Exercise 9 == --
@@ -162,8 +156,7 @@ prop_verification =
 prop_invariant_length :: Property
 prop_invariant_length =
   property $ do
-    unsorted <- forAll $ SimpleGen.list SimpleGen.int
-    length unsorted === length (sort unsorted)
+    success -- WORKSHOP EXERCISE
 
 
 -- |
@@ -182,9 +175,7 @@ prop_invariant_length =
 prop_invariant_input_maintained :: Property
 prop_invariant_input_maintained =
   property $ do
-    unsorted <- forAll $ SimpleGen.list SimpleGen.int
-    let sorted = sort unsorted
-    assert $ all (\el -> elem el sorted) unsorted
+    success -- WORKSHOP EXERCISE
 
 
 -- == Exercise 10 ==
@@ -216,9 +207,7 @@ prop_invariant_input_maintained =
 prop_sum :: Property
 prop_sum =
   property $ do
-    a <- forAll $ SimpleGen.list SimpleGen.int
-    b <- forAll $ SimpleGen.list SimpleGen.int
-    sum (a ++ b) === (sum a + sum b)
+    success -- WORKSHOP EXERCISE
 
 
 -- |
@@ -233,9 +222,7 @@ prop_sum =
 prop_reverse :: Property
 prop_reverse =
   property $ do
-    a <- forAll $ SimpleGen.list SimpleGen.int
-    b <- forAll $ SimpleGen.list SimpleGen.int
-    reverse (a ++ b) === (reverse b ++ reverse a)
+    success -- WORKSHOP EXERCISE
 
 
 -- == Exercise 11 ==
@@ -275,12 +262,7 @@ prop_reverse =
 prop_reconstruction :: Property
 prop_reconstruction =
   property $ do
-    known <- forAll $ SimpleGen.int
-    lefts <- forAll $
-      SimpleGen.list (Gen.filter (/= known) SimpleGen.int)
-    rights <- forAll $
-      SimpleGen.list (Gen.filter (/= known) SimpleGen.int)
-    filter (== known) (lefts ++ [known] ++ rights) === [known]
+    success -- WORKSHOP EXERCISE
 
 
 -- == Exercise 12 ==
@@ -302,6 +284,7 @@ prop_reconstruction =
 -- > map :: (a -> b) -> [a] -> [b]
 --
 
+-- WORKSHOP EXERCISE
 
 -- == Informational ==
 

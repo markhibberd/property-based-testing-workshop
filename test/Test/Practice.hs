@@ -26,6 +26,8 @@ import qualified Test.SimpleGen as SimpleGen
 --    all other values appear
 --
 
+-- WORKSHOP EXERCISE
+
 
 -- == Exercise 14 ==
 
@@ -39,6 +41,8 @@ import qualified Test.SimpleGen as SimpleGen
 -- /hint/: Use length as an invariant.
 --
 
+-- WORKSHOP EXERCISE
+
 
 -- == Exercise 15 ==
 
@@ -51,6 +55,7 @@ import qualified Test.SimpleGen as SimpleGen
 
 flatten2 :: [[a]] -> [a]
 flatten2 =
+  -- WORKSHOP EXERCISE
   error "todo"
 
 
@@ -76,6 +81,8 @@ flatten2 =
 -- > nub :: Eq => [a] -> [a] -- Remove duplicates from list.
 --
 
+-- WORKSHOP EXERCISE
+
 
 -- == Exercise 17 ==
 
@@ -97,6 +104,8 @@ flatten2 =
 -- /hint/: Round-trip for equal size rows.
 -- /hint/: Reconstruction for mismatched rows.
 --
+
+-- WORKSHOP EXERCISE
 
 
 tests :: IO Bool

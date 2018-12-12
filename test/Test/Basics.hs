@@ -132,8 +132,7 @@ prop_safeHead_nonEmpty =
 prop_headOr_empty :: Property
 prop_headOr_empty =
   property $ do
-    dfault <- forAll SimpleGen.int
-    headOr dfault [] === dfault
+    success -- WORKSHOP EXERCISE
 
 -- |
 -- Check that we get the first value in the list when the list is non-empty.
@@ -141,10 +140,7 @@ prop_headOr_empty =
 prop_headOr_non_empty :: Property
 prop_headOr_non_empty =
   property $ do
-    dfault <- forAll SimpleGen.int
-    x <- forAll SimpleGen.int
-    xs <- forAll $ SimpleGen.list SimpleGen.int
-    headOr dfault (x:xs) === x
+    success -- WORKSHOP EXERCISE
 
 -- == Exercise 1: Redux == --
 
@@ -175,7 +171,8 @@ headOr =
 prop_total_empty :: Property
 prop_total_empty =
   property $ do
-    total ([] :: [Int]) === 0
+    success -- WORKSHOP EXERCISE
+
 
 -- |
 -- Check that the single element list always returns the single element.
@@ -183,8 +180,8 @@ prop_total_empty =
 prop_total_singleton :: Property
 prop_total_singleton =
   property $ do
-    x <- forAll $ SimpleGen.int
-    total [x] === x
+    success -- WORKSHOP EXERCISE
+
 
 -- |
 -- Check that larger lists always return the total of all of their elements.
@@ -192,9 +189,8 @@ prop_total_singleton =
 prop_total_larger :: Property
 prop_total_larger =
   property $ do
-    x <- forAll $ SimpleGen.int
-    xs <- forAll $ SimpleGen.list SimpleGen.int
-    total (x:xs) === x + total xs
+    success -- WORKSHOP EXERCISE
+
 
 -- == Exercise 2: Redux == --
 
@@ -225,6 +221,8 @@ total =
 --
 -- /hint/: Think in cases, empty list, singleton list, larger lists.
 --
+
+-- WORKSHOP EXERCISE
 
 
 -- == Exercise 3: Redux == --

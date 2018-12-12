@@ -321,7 +321,8 @@ genUniqueInts = do
 --
 genBool :: Gen Bool
 genBool =
-  Gen.enumBounded
+  -- WORKSHOP EXERCISE
+  error "todo"
 
 
 -- |
@@ -330,10 +331,8 @@ genBool =
 --
 genMostlyWrong :: Gen Bool
 genMostlyWrong =
-  Gen.frequency [
-      (9, Gen.constant False)
-    , (1, Gen.constant True)
-    ]
+  -- WORKSHOP EXERCISE
+  error "todo"
 
 
 -- |
@@ -342,10 +341,8 @@ genMostlyWrong =
 --
 genMaybe :: Gen a -> Gen (Maybe a)
 genMaybe g =
-  Gen.choice [
-      Gen.constant Nothing
-    , fmap Just g
-    ]
+  -- WORKSHOP EXERCISE
+  error "todo"
 
 
 -- == Exercise 5 == --
@@ -366,17 +363,8 @@ genMaybe g =
 --
 genAddress :: Gen Address
 genAddress = do
-  number <- Gen.int (Range.linear 0 1000)
-  street <- Gen.string (Range.linear 3 100) Gen.unicode
-  suffix <- Gen.element ["Street", "Road", "Lane", "Highway", "Place", "Drive"]
-  city <- Gen.string (Range.linear 3 40) Gen.unicode
-  code <- Gen.string (Range.constant 4 5) Gen.digit
-  pure $
-    Address
-      number
-      (List.intercalate " " [street, suffix])
-      city
-      code
+  -- WORKSHOP EXERCISE
+  error "todo"
 
 
 -- |

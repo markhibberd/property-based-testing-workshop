@@ -99,6 +99,7 @@ change register payment cost =
 --
 genProduct :: Gen Product
 genProduct =
+  -- WORKSHOP EXERCISE
   error "todo"
 
 -- |
@@ -108,6 +109,7 @@ genProduct =
 --
 genDollars :: Gen Dollars
 genDollars =
+  -- WORKSHOP EXERCISE
   error "todo"
 
 
@@ -118,6 +120,7 @@ genDollars =
 --
 genItem :: Gen Item
 genItem =
+  -- WORKSHOP EXERCISE
   error "todo"
 
 -- |
@@ -127,6 +130,7 @@ genItem =
 --
 genOrder :: Gen Order
 genOrder =
+  -- WORKSHOP EXERCISE
   error "todo"
 
 -- |
@@ -138,6 +142,7 @@ genOrder =
 --
 genCash :: Gen Cash
 genCash =
+  -- WORKSHOP EXERCISE
   error "todo"
 
 -- |
@@ -155,6 +160,8 @@ genRegister =
 -- Properties for 'merge'.
 --
 
+-- WORKSHOP EXERCISE
+
 
 -- Without looking at the code:
 --   What bug do you think merge' has?
@@ -162,6 +169,8 @@ genRegister =
 --
 -- Properties for 'total'.
 --
+
+-- WORKSHOP EXERCISE
 
 
 -- Without looking at the code:
@@ -172,6 +181,8 @@ genRegister =
 --
 -- Properties for 'discount'.
 --
+
+-- WORKSHOP EXERCISE
 
 
 -- Without looking at the code:
@@ -185,6 +196,9 @@ genRegister =
 --
 -- /note/: This is a particularly challenging problem.
 --
+
+-- WORKSHOP EXERCISE
+
 
 -- Without looking at the code:
 --   What bug do you think change' has?
